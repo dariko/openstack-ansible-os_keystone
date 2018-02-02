@@ -26,6 +26,7 @@
 
 - name: Wait for web server to complete starting
   wait_for:
+    host: "{{ keystone_nginx_address }}"
     port: "{{ item }}"
     timeout: 25
     delay: 10
